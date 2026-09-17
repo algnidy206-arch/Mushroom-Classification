@@ -72,7 +72,6 @@ for col in df:
   plt.show()
 
 
-from matplotlib import figure
 plt.figure(figsize=(18, 12))
 sns.heatmap(df.corr(), annot=True, cmap=("coolwarm"))
 plt.show()
