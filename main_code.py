@@ -32,6 +32,9 @@ for i in df:
   print(i)
   print(df[i].unique())
 
+df["stalk-root"] = df["stalk-root"].replace("?", np.nan)
+df["stalk-root"] = df["stalk-root"].fillna(df["stalk-root"].mode()[0])
+
 encoders = {}
 
 for col in df:
